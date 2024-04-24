@@ -1,0 +1,1203 @@
+/* Stiler for jevn rulling av nettsiden */
+html {
+    scroll-behavior: smooth;
+}
+
+.navn {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 200;
+    text-decoration: none;
+}
+
+.shop-name {
+    font-size: 40px; /* Juster størrelsen etter behov */
+    font-weight: bold; /* Gjør teksten fet */
+
+}
+
+.support-header  {
+    padding: 20px;
+    text-align: center;
+    margin-right: 30%;
+}
+
+/* Nullstiller standardstiler for body og setter skrifttypen */
+body {
+    font-family: "Lato", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* Stiler for navigasjonsmenyen */
+nav {
+    background-color: #111;
+    color: white;
+    padding: 40px 60px;
+}
+
+
+
+/* Stiler for øverste del av navigasjonsmenyen */
+.navTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Stiler for søkefeltet */
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+/* Stiler for søkefeltets input-element */
+.searchInput {
+    border: none;
+    color: rgb(0, 0, 0);
+    width: 300px;
+    height: 30px;
+}
+
+.searchIcon {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 1px;
+    margin-left: 15px;
+}
+
+/* Stiler for plassholder i søkefeltet */
+.searchInput::placeholder {
+    color: lightgray;
+}
+
+.shop-name {
+    margin-left: 15px; /* Legger til ønsket avstand mellom  user ikonet og  nettbutikken navnet */
+}
+
+
+.fa-user {
+    color: gray;
+    text-decoration: none;
+}
+
+
+/* Stiler for bunnen av navigasjonsmenyen */
+.navBottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Stiler for hvert menypunkt */
+.menuItem {
+    margin-right: 50px;
+    cursor: pointer;
+    color: lightgray;
+    font-weight: 400;
+}
+
+/* Stiler for slider-seksjonen */
+.slider {
+    background: url("Bilder/Bilde_for_slider.jpg");
+
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    overflow: hidden;
+}
+
+/* Stiler for slider-wrapper-elementet */
+.sliderWrapper {
+    display: flex;
+    width: 500vw;
+    transition: all 1.5s ease-in-out;
+}
+
+/* Stiler for hvert element i slideren */
+.sliderItem {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Stiler for bakgrunnssirkelen i slideren */
+.sliderBg {
+    width: 750px;
+    height: 750px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* Stiler for sliderbildet */
+.sliderImg {
+    z-index: 1;
+}
+
+/* Stiler for tittel i slideren */
+.sliderTitle {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    font-size: 60px;
+    font-weight: 900;
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+/* Stiler for pris i slideren */
+.sliderPrice {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 60px;
+    font-weight: 300;
+    text-align: center;
+    color: white;
+    border: 1px solid gray;
+    z-index: 1;
+}
+
+/* Stiler for kjøpsknappen i slideren */
+.buyButton {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
+    border: 1px solid gray;
+    background-color: black;
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* Stiler for hover-effekt på kjøpsknappen */
+.buyButton:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Individuelle bakgrunnsfarger for hvert element i slideren */
+.sliderItem:nth-child(1) .sliderBg {
+    background-color: #369e62;
+}
+.sliderItem:nth-child(2) .sliderBg {
+    background-color: rebeccapurple;
+}
+.sliderItem:nth-child(3) .sliderBg {
+    background-color: teal;
+}
+.sliderItem:nth-child(4) .sliderBg {
+    background-color: cornflowerblue;
+}
+.sliderItem:nth-child(5) .sliderBg {
+    background-color: rgb(124, 115, 80);
+}
+
+/* Individuelle farger for prisen i slideren */
+.sliderItem:nth-child(1) .sliderPrice {
+    color: #369e62;
+}
+.sliderItem:nth-child(2) .sliderPrice {
+    color: white;
+}
+.sliderItem:nth-child(3) .sliderPrice {
+    color: teal;
+}
+.sliderItem:nth-child(4) .sliderPrice {
+    color: cornflowerblue;
+}
+.sliderItem:nth-child(5) .sliderPrice {
+    color: cornsilk;
+}
+
+/* Stiler for features-seksjonen */
+.features {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+/* Stiler for hver feature */
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Stiler for ikonet til hver feature */
+.featureIcon {
+    width: 50px;
+    height: 50px;
+}
+
+/* Stiler for tittel til hver feature */
+.featureTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px;
+}
+
+/* Stiler for beskrivelsen til hver feature */
+.featureDesc {
+    color: gray;
+    width: 50%;
+    height: 100px;
+}
+
+/* Stiler for produktseksjonen */
+.product {
+    height: 100vh;
+    background-color: whitesmoke;
+    position: relative;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* Stiler for betalingsvinduet */
+.payment {
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 10px 50px;
+    display: none;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Stiler for tittelen til betalingsvinduet */
+.payTitle {
+    font-size: 20px;
+    color: lightgray;
+}
+
+/* Stiler for label-elementer */
+label {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* Stiler for input-elementer i betalingsvinduet */
+.payInput {
+    padding: 10px;
+    margin: 10px 0px;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+/* Stiler for plassholder i input-elementene i betalingsvinduet */
+.payInput::placeholder {
+    color: rgb(163, 163, 163);
+}
+
+/* Stiler for ikonene som representerer kredittkortene */
+.cardIcons {
+    display: flex;
+}
+
+/* Stiler for hvert ikon av kredittkort */
+.cardIcon {
+    margin-right: 10px;
+}
+
+/* Stiler for informasjonen om betalingskortene */
+.cardInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Stiler for små ikoner */
+.sm {
+    width: 30%;
+}
+
+/* Stiler for betalingsknappen */
+.payButton {
+    position: absolute;
+    height: 40px;
+    bottom: -40;
+    width: 100%;
+    left: 0;
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    background-color: #090a09;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Stiler for lukkeknappen i betalingsvinduet */
+.close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: gray;
+    color: white;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 2px;
+}
+
+/* Stiler for produktbildet */
+.productImg {
+    width: 50%;
+}
+
+/* Stiler for produktinformasjonen */
+.productDetails {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 40%;
+    padding: 50px;
+}
+
+/* Stiler for tittelen til produktet */
+.productTitle {
+    font-size: 75px;
+    font-weight: 900;
+}
+
+/* Stiler for beskrivelsen til produktet */
+.productDesc {
+    font-style: 24px;
+    color: gray;
+}
+
+/* Stiler for farge- og størrelsesvalg */
+.colors,
+.sizes {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+/* Stiler for fargevalg */
+.color {
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    background-color: black;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Stiler for siste fargevalg */
+.color:last-child {
+    background-color: darkblue;
+}
+
+/* Stiler for størrelsesvalg */
+.size {
+    padding: 5px 20px;
+    border: 1px solid black;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Stiler for produktknappen */
+.productButton {
+    float: right;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Stiler for hover-effekt på produktknappen */
+.productButton:hover {
+    background-color: white;
+    color: black;
+}
+
+
+/* CSS for Bestill-knapp */
+button {
+    padding: 10px 20px;
+    background-color: #bfa5a5;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+   
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+
+
+/* Stiler for galleriseksjonen */
+.gallery {
+    padding: 50px;
+    display: flex;
+}
+
+/* Stiler for hvert gallerielement */
+.galleryItem {
+    flex: 1;
+    padding: 50px;
+}
+
+/* Stiler for hvert bilde i galleriet */
+.galleryImg {
+    width: 100%;
+}
+
+/* Stiler for ny sesong-seksjonen */
+.newSeason {
+    display: flex;
+}
+
+/* Stiler for hvert element i ny sesong-seksjonen */
+.nsItem {
+    flex: 1;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Stiler for bildet i ny sesong-seksjonen */
+.nsImg {
+    width: 100%;
+    height: 500px;
+}
+
+/* Stiler for tittelen til ny sesong-seksjonen */
+.nsTitle {
+    font-size: 40px;
+}
+
+/* Stiler for knappen i ny sesong-seksjonen */
+.nsButton {
+    padding: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Stiler for fotoseksjonen */
+footer {
+    display: flex;
+}
+
+.a {
+    color: black;
+}
+
+/* Stiler for venstre del av fotoseksjonen */
+.footerLeft {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+/* Stiler for meny-tittelen i fotoseksjonen */
+.fMenuTitle {
+    font-size: 16px;
+}
+
+/* Stiler for listen i fotoseksjonen */
+.fList {
+    padding: 0;
+    list-style: none;
+}
+
+/* Stiler for hvert element i listen i fotoseksjonen */
+.fListItem {
+    margin-bottom: 10px;
+    color: gray;
+    cursor: pointer;
+}
+
+/* Stiler for høyre del av fotoseksjonen */
+.footerRight {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Stiler for input-elementet i fotoseksjonen */
+.fInput {
+    padding: 5px;
+}
+
+/* Stiler for knappen i fotoseksjonen */
+.fButton {
+    padding: 5px;
+    background-color: black;
+    color: white;
+}
+
+/* Stiler for ikonene i fotoseksjonen */
+.fIcons {
+    display: flex;
+}
+
+/* Stiler for hvert ikon i fotoseksjonen */
+.fIcon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* Stiler for copyright-informasjonen */
+.copyright {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+/* Responsivt design for skjermer med bredde mindre enn 480px */
+@media screen and (max-width: 480px) {
+    /* Tilpassede stiler for navigasjonsmenyen på små skjermer */
+    nav {
+        padding: 20px;
+    }
+
+    /* Skjul søkefeltet på små skjermer */
+    .search {
+        display: none;
+    }
+
+    .navBottom {
+        flex-wrap: wrap;
+    }
+
+    /* Styles for each menu item at smaller screen size */
+    .menuItem {
+        margin: 20px;
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    /* Remove the clip path from the slider */
+    .slider {
+        clip-path: none;
+    }
+
+    /* Adjust the width of the slider image */
+    .sliderImg {
+        width: 90%;
+    }
+
+    /* Adjust the size of the slider background */
+    .sliderBg {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Hide the title in the slider */
+    .sliderTitle {
+        display: none;
+    }
+
+    /* Adjust the positioning and background color of the price in the slider */
+    .sliderPrice {
+        top: unset;
+        bottom: -50;
+        left: 0;
+        background-color: lightgrey;
+    }
+
+    /* Adjust the positioning of the buy button in the slider */
+    .buyButton {
+        right: 0;
+        top: 0;
+    }
+
+    /* Change the direction of the feature elements to column on smaller screens */
+    .features {
+        flex-direction: column;
+    }
+
+    /* Remove the clip path from the product section */
+    .product {
+        clip-path: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust the width of the product image on smaller screens */
+    .productImg {
+        width: 80%;
+    }
+
+    /* Styles for product information on smaller screens */
+    .productDetails {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        top: 0;
+    }
+
+    /* Adjust the size of the product title on smaller screens */
+    .productTitle {
+        font-size: 50px;
+        margin: 0;
+    }
+
+    /* Hide the gallery section on smaller screens */
+    .gallery {
+        display: none;
+    }
+
+    /* Change the direction of the "New Season" elements to column on smaller screens */
+    .newSeason {
+        flex-direction: column;
+    }
+
+    /* Add padding for the second "New Season" element on smaller screens */
+    .nsItem:nth-child(2) {
+        padding: 50px;
+    }
+
+    /* Adjust footer elements for smaller screens */
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Styles for the left part of the footer on smaller screens */
+    .footerLeft {
+        padding: 20px;
+        width: 90%;
+    }
+
+    /* Styles for the right part of the footer on smaller screens */
+    .footerRight {
+        padding: 20px;
+        width: 90%;
+        align-items: center;
+        background-color: whitesmoke;
+    }
+
+    /* Styles for payment information on smaller screens */
+    .payment {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+  /* her starter css for logg inn & registrer deg formen */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+h1 {
+    margin-left: 4px;
+
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.login-container {
+    margin-top: 20px;
+}
+
+.error-message,
+.success-message {
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.error-message {
+    background-color: #ffcccc;
+    color: #cc0000;
+}
+
+.success-message {
+    background-color: #ccffcc;
+    color: #009900;
+}
+
+
+.registration-container {
+    margin-top: 20px;
+}
+
+.registration-container a {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+}
+
+.registration-container a:hover {
+    text-decoration: underline;
+}
+
+
+/* style for logg inn button ved navbar */
+
+.loginButton {
+    display: inline-block;
+    padding: 10px 20px;
+    background: color #4caf50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 20px;
+  }
+
+
+  .CustomerButton {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 20px;
+  }
+
+  /* her slutter css for logg inn & registrer deg formen */
+
+
+/* style for FAQ side */
+
+.wrapper {
+  max-width: 75%;
+  margin: auto;
+}
+
+.wrapper > p,
+.wrapper > h1 {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.wrapper > h1 {
+  letter-spacing: 3px;
+}
+
+.accordion {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 2rem 2.5rem;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.accordion i {
+  font-size: 1.6rem;
+}
+
+.active,
+.accordion:hover {
+  background-color: #f1f7f5;
+}
+.pannel {
+  padding: 0 2rem 2.5rem 2rem;
+  background-color: white;
+  overflow: hidden;
+  background-color: #f1f7f5;
+  display: none;
+}
+.pannel p {
+    font-size: 1rem;
+    line-height: 1.2;
+    margin: 0.5rem 0;
+    padding: 1rem;
+}
+
+
+.faq {
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Reduser grensen */
+    margin: 10px 0; /* Reduser margen */
+  }
+
+
+.faq.active {
+  border: none;
+}
+
+/* Her slutter css for faq siden min */
+
+
+/* style for min profil side */
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 20px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+#edit-profile {
+    margin-top: 20px;
+}
+
+
+
+/* Style for support siden */
+
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+section h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+section p {
+    margin-bottom: 10px;
+}
+
+section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+section ul li {
+    margin-bottom: 5px;
+}
+
+form {
+    margin-top: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button[type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.support-header h1 {
+    font-size: 36px;
+    color: #333;
+    margin-left: 39%;
+}
+
+
+
+
+/* hamburgermeny */
+.off-screen-menu {
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    width: 100%;
+    max-width: 200px;
+    position: fixed;
+    top: 0;
+    right: -350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    transition: .3s ease;
+    z-index: 1000; /* Legger til en z-indeks for å sikre at menyen er over alt annet */
+
+}
+
+.off-screen-menu.active {
+    right: 0;
+}
+
+/* Ham menu */
+.ham-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    z-index: 1001;
+}
+
+.ham-menu span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.ham-menu span:before,
+.ham-menu span:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.ham-menu span:before {
+    top: -10px;
+}
+
+.ham-menu span:after {
+    bottom: -10px;
+}
+
+.ham-menu.active span {
+    background-color: transparent;
+}
+
+.ham-menu.active span:before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.ham-menu.active span:after {
+    transform: rotate(-45deg);
+    bottom: 0;
+}
+
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.off-screen-menu ul li {
+    margin-bottom: 45px; /* dette er for mer space for hver bokstav */
+}
+
+
+/* style for handlekurv icon */
+
+.cart-link {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cart-link:hover {
+    background-color: #f0f0f0;
+}
+
+.cart-icon {
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 5px;
+}
+.cart-text {
+    display: inline-block;
+}
+
+#cartCount {
+    font-weight: bold;
+}
+
+/* Her slutter css for handlekurv icon */
+
+
+
+/* style for cart */
+
+
+/* Stil for handlekurvmodal */
+#handlekurv-modal {
+    display: none; /* Skjuler handlekurvmodalen som standard */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Gjør bakgrunnen delvis gjennomsiktig */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Plasser modalen vertikalt og horisontalt i midten av skjermen */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Juster bredden etter behov */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Stil for handlekurvknappen */
+#showCart {
+    background-color: #bfa5a5; /* Grønn farge */
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#showCart:hover {
+    background-color: #45a049; /* Mørkere grønn farge ved hover */
+}
+
+/* Stil for tøm handlekurv knapp */
+#emptyCartButton {
+    background-color: #bfa5a5; /* Rød farge */
+    color: white;
+    padding: 14px 20px;
+    margin-top: 20px; /* Legg til litt plass over knappen */
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#emptyCartButton:hover {
+    background-color: #45a049; /* Mørkere rød farge ved hover */
+}
+
+
+.addtocart {
+   float: right;
+   padding: 10px 20px;
+   background-color: black;
+   color: white;
+   font-weight: 600;
+   cursor: pointer;
+
+}
+
+
+
+
+
+
+
+
+
