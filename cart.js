@@ -2,7 +2,7 @@
 let sum = Number(localStorage.getItem("Sum")) || 0;
 let cartCount2 = localStorage.getItem("counting");
 let cartCount = parseInt(cartCount2);
-if (cartCount) {
+if (cartCount) {  
   cartCount = localStorage.getItem("counting");
 } else {
   cartCount = localStorage.setItem("counting", 0)
