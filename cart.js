@@ -64,6 +64,8 @@ function AIR_FORCE1() {
   // } else {
     // Hvis skoen allerede er i handlekurven, gjør ingenting eller gi en beskjed til brukeren
     console.log("Air Force-skoen er allerede i handlekurven.");
+
+
   }
 
 function addtocart(skotype, pris) {
@@ -84,6 +86,7 @@ function addtocart(skotype, pris) {
 
     // Vis en bekreftelsesmelding
     alert(skotype + " er lagt til i handlekurven.");
+    
 
    
 

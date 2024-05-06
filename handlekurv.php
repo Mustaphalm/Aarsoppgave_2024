@@ -61,8 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['productName'], $_POST[
     $quantity = $_POST['quantity'];
 
     // Forbered SQL-setningen for å sette inn data i databasen
-    $sql = "INSERT INTO orders 
-(product_name, quantity) VALUES ('$productName', '$quantity')";
+    $sql = "INSERT INTO orders (product_name, quantity) VALUES ('$productName', '$quantity')";
     // Utfør SQL-setningen og sjekk om dataene ble satt inn i databasen
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
