@@ -28,6 +28,12 @@ body {
     margin: 0;
 }
 
+.body1 {
+    background-color: #d6c3c3;
+}
+
+
+
 /* Stiler for navigasjonsmenyen */
 nav {
     background-color: #111;
