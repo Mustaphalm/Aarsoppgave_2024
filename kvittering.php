@@ -18,43 +18,21 @@ if(isset($_SESSION['brukernavn'])) {
     echo $bruker_id;
 
     // SQL-spørring for å hente bestillingsinformasjon basert på brukerens ID
-    $product =  $_COOKIE["items"];
-    echo $product;
-    echo gettype($product) . "<br>";
+    $product =  $_COOKIE["items"]; // Henter produktinformasjon fra en informasjonskapsel (cookie)
+    echo $product; // Viser produktinformasjonen
+    echo gettype($product) . "<br>"; // Viser typen til $product-variabelen
     $sql = "INSERT INTO orders (customer_name, customer_email, product_name, quantity, user_id) VALUES ('$brukernavn', '$email', '$product', 1, $bruker_id)";
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
         // Hent ordrenummeret for den siste bestillingen
         $orderNumber = mysqli_insert_id($conn);
-        echo "Record inserted successfully. Order number: " . $orderNumber;
+        echo "Record inserted successfully. Order number: " . $orderNumber; // Viser en bekreftelse på at dataene ble lagt til i databasen
     } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-        }
-    
-
-   
-   # $sql = "SELECT * FROM orders WHERE user_id = '$bruker_id'";
-    
-    // Utfør spørringen
-    // $result = $conn->query($sql);
-
-    // // Sjekk om det finnes bestillingsinformasjon for den påloggede brukeren
-    // if ($result->num_rows > 0) {
-    //     // Vis kvitteringsinformasjonen for hver bestilling
-    //     while($row = $result->fetch_assoc()) {
-    //         echo "<h1>Kvittering for ordrenummer: " . $row['order_number'] . "</h1>";
-    //         echo "<p>Produkt: " . $row['product_name'] . "</p>";
-    //         echo "<p>Antall: " . $row['quantity'] . "</p>";
-    //         echo "<p>Ordredato: " . $row['order_date'] . "</p>";
-    //         // Legg til annen relevant informasjon om bestillingen
-    //     }
-    // } else {
-    //     echo "<p>Ingen bestillinger funnet.</p>";
-    // }
-
-    // Lukk databaseforbindelsen
-    $conn->close();
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn); // Viser en feilmelding hvis det oppstår en feil under innsetting av dataene i databasen
+    }
+ 
+    $conn->close(); // Lukker tilkoblingen til databasen
 } else {
     // Brukeren er ikke logget inn, omdiriger til innloggingssiden
     header("Location: Logg_inn.php");
@@ -68,18 +46,18 @@ if(isset($_SESSION['brukernavn'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kvittering</title>
+    <title>Kvittering</title> <!-- Tittel på siden -->
 </head>
 <body>
     <div>
-        <h1>Takk for din bestilling!</h1>
-        <p>Vi har mottatt din bestilling.</p>
+        <h1>Takk for din bestilling!</h1> <!-- Overskrift for kvittering -->
+        <p>Vi har mottatt din bestilling.</p> <!-- Informasjonsmelding om at bestillingen er mottatt -->
         <div>
-            <p>Din bestilling er bekreftet.</p>
-            <p>Du vil motta en ordrebekreftelse på e-post.</p>
+            <p>Din bestilling er bekreftet.</p> <!-- Informasjonsmelding om at bestillingen er bekreftet -->
+            <p>Du vil motta en ordrebekreftelse på e-post.</p> <!-- Informasjonsmelding om at en ordrebekreftelse vil bli sendt på e-post -->
         </div>
-        <p>Ordrenummer: <?php echo $orderNumber; ?></p>
-        <a href="index.php">Tilbake til startsiden</a>
+        <p>Ordrenummer: <?php echo $orderNumber; ?></p> <!-- Viser ordrenummeret for den siste bestillingen -->
+        <a href="index.php">Tilbake til startsiden</a> <!-- Lenke tilbake til startsiden -->
     </div>
 </body>
 </html>

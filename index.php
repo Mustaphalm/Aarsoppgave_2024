@@ -30,6 +30,10 @@
                 <li><a href="FAQ.php">FAQ</a></li>
                 <li><a href="Support.php">Få Hjelp</a></li>
                 <li><a href="Kundekonto.php">Min Profil</a></li>
+                <li><a href="admin.dashboard.php"> Admin</a></li>
+                <li><a href="sjekk.status.php"> sjekk status</a></li>
+
+
 
             </ul>
         </div>
